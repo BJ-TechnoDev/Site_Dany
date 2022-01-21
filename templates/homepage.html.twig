@@ -3,7 +3,11 @@
 {% block title %}Mon Portfolio{% endblock %}
 {% block body %}
     <header class="jumbotron" style="margin-bottom: 0;padding-top: 160px;">
-        <h1 class="text-center" style="font-size: 40px;font-weight: bold;text-shadow: 3px 5px 7px #0000005c;">Bienvenue sur mon portfolio !</h1>
+        <h1 class="text-center" style="font-size: 40px;font-weight: bold;text-shadow: 3px 5px 7px #0000005c;">
+            Bienvenue sur mon portfolio !
+            <br>
+            Made with symfony
+        </h1>
     </header>
     <section class="text-center" id="about">
         <div class="container">
@@ -20,7 +24,7 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <p class="text-center" style="font-weight: bold;">Mes compétences</p>
+                    <h2 class="text-center" style="font-weight: bold;">Mes compétences</h2>
 {#                    HTML#}
                     <div class="progress-Bar">
                         <i class="fab fa-html5 fa-3x" style="margin-right: 17px;"></i>
@@ -147,7 +151,69 @@
         </div>
     </section>
 
+{#formation#}
+
     <section class="text-center" id="formation">
-{#        todo#}
+        <h2 style="font-size: 40px;text-shadow: 3px 3px 4px rgb(0 0 0 / 46%);padding: 50px 0;color: #000000;">Mes services proposés</h2>
+        <div class="container">
+            <div class="row responsive-tab">
+
+                <div class="col-md-6">
+
+                    <h2 class="title-tab">Mes formation</h2>
+
+                    <div class="tabs">
+
+                        <input type="radio" name="tabs" id="tabone" checked="checked">
+                        <label for="tabone">Lycée</label>
+                        <div class="tab">
+                            <h1>Lycée Du Bugey</h1>
+                            <p>Je suis diplomé du baccalauréat scientifique spécialisation physique chimie</p>
+                        </div>
+
+                        <input type="radio" name="tabs" id="tabtwo">
+                        <label for="tabtwo">Etude Supérieur</label>
+                        <div class="tab">
+                            <h1>Sciences U Lyon</h1>
+                            <p>Pour mes études supérieur j'ai choisi de faire un bachelor nommé ESGI qui est un bachelor informatique <br>
+                                De plus je m'oriente vers les spécifissité de developpement web</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 responsive-tab-margin">
+
+                    <h2 class="title-tab">Mes jobs</h2>
+
+
+                    <div class="tabs">
+
+                        <input type="radio" name="tabs2" id="tab2one" checked="checked">
+                        <label for="tab2one">Mon Alternanace</label>
+                        <div class="tab">
+                            <h1>Adventury</h1>
+                            <p>Pour mon alternance j'occupe un poste de developpeur web fullstack à Adventury depuis Septembre 2021 jusqu'à Septembre 2023
+                                <br><br>
+                                <a href="https://www.adventury.fr/" target="_blank">Voir le site</a></p>
+                        </div>
+
+                        <input type="radio" name="tabs2" id="tab2two">
+                        <label for="tab2two">Micro Entreprise</label>
+                        <div class="tab">
+                            <h1>BJ-TechnoDev</h1>
+                            <p>Avec un ami de Sciences U (mon école) nous avons monté une start up consistant à créer des sites web mais pas seulement je vous laisse vous renseigner sur notre site
+                                <br> <br>
+                                <a href="" target="_blank">Voir notre site</a></p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </section>
 {% endblock %}
