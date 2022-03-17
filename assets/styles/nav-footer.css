@@ -177,7 +177,7 @@ nav .nav-bar .nav-bar_item a:hover:after {
     color: #fff;
 }
 input[type="checkbox"]{
-    display: none;
+    display: none !important;
 }
 
 @keyframes rotate {

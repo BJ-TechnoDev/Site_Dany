@@ -1,5 +1,9 @@
 import 'jquery'
 import '../bootstrap';
+import AOS from 'aos';
+
+AOS.init();
+
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -8,6 +12,7 @@ import '../bootstrap';
  */
 import '../js/alert';
 import '../js/progressbar';
+import '../js/nav-respons';
 // any CSS you import will output into a single css file (app.css in this case)
 
 import '../styles/app.css';

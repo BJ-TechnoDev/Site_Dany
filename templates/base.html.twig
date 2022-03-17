@@ -29,10 +29,10 @@
     <label for="active" class="menu-btn-resp"><i class="fas fa-bars" style="margin-top: 13px;"></i></label>
     <div class="wrapper-resp">
         <ul>
-            <li><a href="{{ path('home') }}#about">A propos</a></li>
-            <li><a href="{{ path('home') }}#service">Services</a></li>
-            <li><a href="{{ path('home') }}#formation">Formations</a></li>
-            <li><a href="{{ path('contact') }}">Contact</a></li>
+            <li><a href="{{ path('home') }}#about" class="exit">A propos</a></li>
+            <li><a href="{{ path('home') }}#service" class="exit">Services</a></li>
+            <li><a href="{{ path('home') }}#formation" class="exit">Formations</a></li>
+            <li><a href="{{ path('contact') }}" class="exit">Contact</a></li>
         </ul>
     </div>
 </div>
@@ -57,7 +57,12 @@
             crossorigin="anonymous">
     </script>
     {{ encore_entry_script_tags('app') }}
+
+
 {% endblock %}
+
+
+{#<script src="https://unpkg.com/aos@next/dist/aos.js%22%3E"></script>#}
 
 </body>
 </html>
