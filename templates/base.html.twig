@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Welcome!{% endblock %}</title>
-    <meta name="description" content="{% block metadescription %}{% endblock %}">
-    {% block stylesheets %}
-        <link rel="shortcut icon" href="{{ asset('build/favicon.ico') }}" type="image/x-icon">
-        {{ encore_entry_link_tags('app') }}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Dany{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="shortcut icon" href="" type="image/x-icon">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
+            <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="description" content="{% block metadescription %}{% endblock %}">
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+    {% block body %}{% endblock %}
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+        <script
+                src="https://code.jquery.com/jquery-3.4.1.min.js"
+                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+                crossorigin="anonymous">
+        </script>
     {% endblock %}
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
-
-</head>
-<body>
-
-
-{% block body %}{% endblock %}
-
-
-{% block javascripts %}
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous">
-    </script>
-    {{ encore_entry_script_tags('app') }}
-
-
-{% endblock %}
-
-
-</body>
-</html>
+    </body>
+    </html>
