@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="description" content="{% block metadescription %}{% endblock %}">
     {% block stylesheets %}
+        <link rel="shortcut icon" href="{{ asset('build/favicon.ico') }}" type="image/x-icon">
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
@@ -11,45 +14,10 @@
 </head>
 <body>
 
-<nav>
-    <a class="logo" href="{{ path('home') }}">Jérémy</a>
-    <div class="nav-no-responsive">
-    <ul class="nav-bar nav-no-responsive">
-        <li class="nav-bar_item"><a href="{{ path('home') }}#about">A propos</a></li>
-        <li class="nav-bar_item"><a href="{{ path('home') }}#service">Services</a></li>
-        <li class="nav-bar_item"><a href="{{ path('home') }}#formation">Formations</a></li>
-        <li class="nav-bar_item"><a href="{{ path('contact') }}">Contact</a></li>
-    </ul>
-    </div>
-</nav>
-
-
-<div class="nav-respons" style="display: none;z-index: 99999999;">
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-btn-resp"><i class="fas fa-bars" style="margin-top: 13px;"></i></label>
-    <div class="wrapper-resp">
-        <ul>
-            <li><a href="{{ path('home') }}#about" class="exit">A propos</a></li>
-            <li><a href="{{ path('home') }}#service" class="exit">Services</a></li>
-            <li><a href="{{ path('home') }}#formation" class="exit">Formations</a></li>
-            <li><a href="{{ path('contact') }}" class="exit">Contact</a></li>
-        </ul>
-    </div>
-</div>
-
 
 {% block body %}{% endblock %}
 
 
-
-<footer>
-    <div class="social">
-        <a href="https://www.instagram.com/bjtechnodev/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/BJTechnoDev" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://github.com/BJ-TechnoDev" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-    <p class="copyright">Developper par l'entreprise <a href="">BJ-TechnoDev</a> © 2022</p>
-</footer>
 {% block javascripts %}
     <script
             src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -61,8 +29,6 @@
 
 {% endblock %}
 
-
-{#<script src="https://unpkg.com/aos@next/dist/aos.js%22%3E"></script>#}
 
 </body>
 </html>
