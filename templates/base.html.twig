@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Base Site{% endblock %}</title>
+        <meta name="description" content="{% block metadescription %}{% endblock %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
         {% block stylesheets %}
-            <link rel="shortcut icon" href="" type="image/x-icon">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
-            <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="description" content="{% block metadescription %}{% endblock %}">
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
