@@ -14,55 +14,39 @@
 <body>
 
 
-<div class="big-circles">
-    <div class="big-circle"></div>
-    <div class="big-circle"></div>
-    <div class="big-circle"></div>
-</div>
-<section id="home">
-    <div class="slide-wrapper">
-        <div class="smallcircles">
-            <div class="small-circle"></div>
-            <div class="small-circle"></div>
-            <div class="small-circle"></div>
-            <div class="small-circle"></div>
-            <div class="small-circle"></div>
-            <div class="small-circle"></div>
-        </div>
-        <div class="cover-wrapper text-center" id="home-content">
-            <div class="cover-wrapper__inner">
-                <a href="#"><p> <button class="btn btn-cta btn-cta__green text-uppercase trigger" data-toggle="closed">Tout savoir sur mes cancers</button></p></a>
-                <a href="#"><p> <button class="btn btn-cta btn-cta__green text-uppercase trigger" data-toggle="closed">Voir toutes mes décorations</button></p></a>
-                <a href="#"><p> <button class="btn btn-cta btn-cta__green text-uppercase trigger" data-toggle="closed">Découvrir l'intégralité de mes tableaux</button></p></a>
+<div class= 'container'>
+    <div class="container_content">
+        <div class="container_content_inner">
+            <div class="title">
+                <h1>Dany</h1>
             </div>
-                <h1 style="margin-top: 250px;">Dany</h1>
+            <div class="par">
+                <p>
+                    Bienvenue sur mon site pour explorer la partie qui vous interesse cliquez sur le bouton
+                </p>
+            </div>
+            <div class="btns" style="display:flex;">
+                <button class="btns_more">Mes cancers</button>
+                <button class="btns_more">Mes tableaux</button>
+                <button class="btns_more">Mes décorations</button>
+            </div>
         </div>
     </div>
-    <section class="portfolio-wrapper" id="portfolio">
-        <div class="cover-wrapper text-center" id="home">
-            <div class="cover-wrapper__inner">
-                <div class="cover-wrapper__container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h1 class="test-uppercase">Portfolio</h1>
-                                <p> <button class="btn btn-cta btn-cta__green text-uppercase trigger" data-toggle="opened">Back home</button></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container_outer_img">
+        <div class="img-inner">
+            <img src='https://images.unsplash.com/photo-1517911041065-4960862d38f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80'  alt="" class="container_img"/>
         </div>
-    </section>
-</section>
+    </div>
+</div>
+<div class="overlay"></div>
 
 
 
-    <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous">
-    </script>
-    {{ encore_entry_script_tags('home') }}
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+</script>
+{{ encore_entry_script_tags('home') }}
 </body>
 </html>
