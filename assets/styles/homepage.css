@@ -10,7 +10,7 @@ body,html{
 /*todo changer les couleurs*/
 :root {
     --secondary-color: #151226;
-    --contrast-color: #BF307F;
+    --contrast-color: #E5413F;
 }
 .overlay {
     position: absolute;
@@ -21,6 +21,17 @@ body,html{
     height: 100%;
     z-index: -10;
     background-color: dimgrey;
+}
+
+a:hover {
+    color: #AF6C66;
+    text-decoration: none;
+    font-size: 18px;
+    border-color: #AF6C66;
+}
+
+a {
+    transition: .3s ease-in-out;
 }
 
 .container {
@@ -77,10 +88,10 @@ p{
 
 .btns_more {
     background: transparent;
-    border: 1px solid var(--contrast-color);
+    border: 2px solid var(--contrast-color);
     border-radius: 50px;
     padding: 8px 12px;
-    color: #BF307F;
+    color: #E5413F;
     font-size: 16px;
     text-transform: uppercase;
     position: relative;
@@ -89,6 +100,7 @@ p{
     transform: translateY(50px);
     animation: slideUp .8s ease-in-out  forwards 1s;
     margin-left: 10px;
+    text-align: center;
 }
 
 .title {
