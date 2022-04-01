@@ -3,7 +3,7 @@
     overflow: hidden;
     background: #f1f6f5; }
 .footer-08 a {
-    color: #12cc94; }
+    color: #ff5a5f; }
 .footer-08 p {
     color: rgba(0, 0, 0, 0.3); }
 .footer-08 .footer-heading {
@@ -45,16 +45,18 @@
     outline: none !important;
     -webkit-box-shadow: none;
     box-shadow: none; }
+
 .footer-08 .contact-form .submit {
     background: #2f89fc !important;
     color: #fff; }
 .footer-08 .contact-form textarea.form-control {
     height: inherit !important; }
+
 .footer-08 .aside-stretch-right {
-    background: #12cc94; }
+    background: #ff5a5f; }
 .footer-08 .aside-stretch-right:after {
-    background: #12cc94; }
-@media (max-width: 767.98px) {
+    background: #ff5a5f; }
+@media (max-width: 768px) {
     .footer-08 .aside-stretch-right {
         background: transparent; }
     .footer-08 .aside-stretch-right:after {
