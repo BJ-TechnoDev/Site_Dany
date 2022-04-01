@@ -7,7 +7,6 @@
 body,html{
     overflow-x: hidden;
 }
-/*todo changer les couleurs*/
 :root {
     --secondary-color: #151226;
     --contrast-color: #E5413F;
