@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CancerController extends AbstractController
 {
     /**
-     * @Route("/cancer", name="cancer")
+     * @Route("/cancer", name="cancers")
      */
     public function index(Request $request, MailerInterface $mailer): Response
     {
