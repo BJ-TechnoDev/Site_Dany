@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     width: 100%;
     color: white;
-    background-color: #3b1b8b;
+    background-color: #595959;
     overflow: hidden;
 }
 section {
@@ -21,9 +21,10 @@ section {
     border-radius: 0;
 }
 .btn-cta__green {
-    border-color: #76ff03;
+    border-color: #f33636;
     background-color: transparent;
-    color: #76ff03;
+    color: #f0f0f0;
+    padding: 25px;
 }
 .btn-cta__gray {
     border: #ccc;
@@ -54,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 100%;
 }
 .cover-wrapper__inner {
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    justify-content: space-evenly;
 }
 .cover-wrapper__container {
     margin-right: auto;
@@ -65,7 +66,7 @@ section#nav {
     height: 50px;
 }
 #home .slide-wrapper {
-    background-color: #623ebd;
+    background-color: dimgrey;
 }
 #home-content {
     z-index: 5;
@@ -153,7 +154,7 @@ section#nav {
     display: block;
     width: 250px;
     height: 250px;
-    background: #3b1b8b;
+    background: #595959;
     margin-top: -125px;
     margin-left: -125px;
     border-radius: 125px;
@@ -206,7 +207,7 @@ section#nav {
     display: block;
     width: 500px;
     height: 500px;
-    background: #1f0a55;
+    background: #3f3f3f;
     margin-top: -250px;
     margin-left: -250px;
     border-radius: 250px;
