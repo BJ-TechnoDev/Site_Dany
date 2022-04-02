@@ -29,7 +29,7 @@ class CancerController extends AbstractController
 
             $message = (new Email())
                 ->from($contactFormData['email'])
-                ->to('gilles.bruyere01@orange.fr')
+                ->to('bruyeredaniele01@gmail.com')
                 ->subject($contactFormData['subject'])
                 ->text('Name: '.$contactFormData['fullName'].\PHP_EOL.'Subject: '.$contactFormData['subject'].\PHP_EOL.'Email: '.$contactFormData['email'].\PHP_EOL. 'Message: '.$contactFormData['message'],
                     'text/plain');
