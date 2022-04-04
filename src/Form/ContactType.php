@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -26,11 +27,13 @@ class ContactType extends AbstractType
                     'placeholder' => 'test@gmail.com'
                 )
             ])
-            ->add('subject', TextType::class, [
-                'label' => 'Subject',
-                'attr' => array(
-                    'placeholder' => 'Your Subject here'
-                )
+            ->add('subject', ChoiceType::class, [
+              'choices'  => [
+                'Me contacter a propos de ..' => '',
+                'Mes cancers' => '',
+                'Une demande de tableaux ou décos' => '',
+                'Autre' => ''
+              ]
             ])
             ->add('message', TextareaType::class, [
                 'attr' => ['rows' => 3, 'placeholder' => 'Your mess here'],
