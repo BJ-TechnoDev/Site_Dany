@@ -8,8 +8,8 @@ body,html{
     overflow-x: hidden;
 }
 :root {
-    --secondary-color: #151226;
-    --contrast-color: #E5413F;
+    --secondary-color: #28c6f7;
+    --contrast-color: #901915;
 }
 .overlay {
     position: absolute;
@@ -19,7 +19,7 @@ body,html{
     bottom: 0;
     height: 100%;
     z-index: -10;
-    background-color: dimgrey;
+    background-color: pink;
 }
 
 a:hover {
@@ -38,7 +38,7 @@ a {
     height: 100vh;
     justify-content: space-around;
     align-items: center;
-    color: #fff;
+    color: #373737;
     animation: expand .8s ease forwards;
     background-color: var(--secondary-color);
     position: relative;
@@ -90,7 +90,7 @@ p{
     border: 2px solid var(--contrast-color);
     border-radius: 50px;
     padding: 8px 12px;
-    color: #E5413F;
+    color: var(--contrast-color);
     font-size: 16px;
     text-transform: uppercase;
     position: relative;
