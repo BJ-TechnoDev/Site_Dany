@@ -1,17 +1,18 @@
-html{
-    overflow-x: hidden;
-}
-
 .ml-auto{
     margin-left: auto !important;
 }
-.header .navbar-nav{
-    transition: .5s ease-in-out;
-}
+/*.header .navbar-nav{*/
+/*    transition: .5s ease-in-out;*/
+/*}*/
+
+/* TODO Faire la transition navbar mobile
+     A FAIRE
+     */
 
 @media (max-width: 991px) {
   .header .navbar-nav{
         position: absolute;
+        display: none;
         top: 100%;
         right: -100%;
         background: #ffffff;
@@ -20,6 +21,7 @@ html{
     }
     .header .navbar-nav.active{
         right: 0;
+        display: block;
     }
     .header .navbar .nav-link{
         color: black;
