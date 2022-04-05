@@ -1,3 +1,35 @@
+html{
+    overflow-x: hidden;
+}
+
 .ml-auto{
     margin-left: auto !important;
+}
+.header .navbar-nav{
+    transition: .5s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .header .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #ffffff;
+        width: 30rem;
+        height: 100vh;
+    }
+    .header .navbar-nav.active{
+        right: 0;
+    }
+    .header .navbar .nav-link{
+        color: black;
+        display: block;
+        padding: 30px 0;
+        font-size: 2rem;
+        text-align: center;
+
+    }
+    .collapse:not(.show) {
+        display: block !important;
+    }
 }
