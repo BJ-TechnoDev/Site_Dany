@@ -13,3 +13,4 @@ AOS.init();
 // start the Stimulus application
 import '../bootstrap';
 import './navbar';
+import './cookies';

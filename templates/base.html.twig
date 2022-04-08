@@ -8,6 +8,7 @@
         <link rel="shortcut icon" href="" type="image/x-icon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -29,13 +30,23 @@
         </nav>
     </header>
     {% block body %}{% endblock %}
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Do you like cookies?</b> &#x1F36A; We use cookies to ensure you get the best experience on our website. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
+
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            I agree
+        </button>
+        <button type="button" class="btn btn-primary btn-sm deletecookies">
+            I disagree
+        </button>
+    </div>
     <footer class="footer-08">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-9 py-5">
                     <div class="row">
                         <div class="col-md-4 mb-md-0 mb-4">
-                            <h2 class="footer-heading">A props de moi</h2>
+                            <h3 class="footer-heading">A props de moi</h3>
                             <p>Vous avez aimé mes décos ou mes tableaux n'hésiter pas à me contacter, je peux réaliser vos envies.</p>
                             <ul class="ftco-footer-social p-0" style="display: flex; justify-content: center">
                                 <li class="ftco-animate"><a data-toggle="tooltip" data-placement="top" title="Cancer"><span class="fa-solid fa-virus"></span></a></li>
@@ -49,7 +60,7 @@
                                 <div class="col-md-12 col-lg-9">
                                     <div class="row">
                                         <div class="col-md-6 mb-md-0 mb-4">
-                                            <h2 class="footer-heading">Plan du site</h2>
+                                            <h3 class="footer-heading">Plan du site</h3>
                                             <ul class="list-unstyled">
                                                 <li><a href="{{ path('homepage') }}" class="py-1 d-block">Accueil</a></li>
                                                 <li><a href="#" class="py-1 d-block">Mes cancers</a></li>
@@ -58,7 +69,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-md-6 mb-md-0 mb-4">
-                                            <h2 class="footer-heading">Connexion</h2>
+                                            <h3 class="footer-heading">Connexion</h3>
                                             <ul class="list-unstyled">
                                                 <li><a href="#" class="py-1 d-block">Se connecter</a></li>
                                                 <li><a href="#" class="py-1 d-block">S'inscrire</a></li>
