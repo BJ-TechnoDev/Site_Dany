@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dany Bruyère - Bienvenue sur la page d'accueil de mon site</title>
+    <meta name="description" content="Bonjour je suis Danielle Bruyère je vous présente mon site qui consistera a vous presenter mes deux cancers et mes conseils et aide pour vous aide, Je vous présenterai également mes tableaux et mes décoration au fil du temps">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    {{ encore_entry_link_tags('login') }}
+</head>
+<body>
+<!-- Main Content -->
+<div class="container-fluid">
+    <div class="row main-content bg-success text-center">
+        <div class="col-md-4 text-center company__info">
+            <span class="company__logo"><h2><span class="fa fa-android"></span></h2></span>
+            <h3 class="company_title" style="color: black; font-size: 40px;text-shadow: 3px 2px 4px black">Dany</h3>
+        </div>
+        <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+            <div class="container-fluid">
+                <div class="row">
+                    <h2>Sign Up</h2>
+                </div>
+                <div class="row">
+                    {{ form_start(registrationForm) }}
+                    <div class="row">
+                        {{ form_row(registrationForm.name) }}
+                    </div>
+                    <div class="row">
+                        {{ form_row(registrationForm.email) }}
+                    </div>
+                    <div class="row">
+                        <!-- <span class="fa fa-lock"></span> -->
+                        {{ form_row(registrationForm.plainPassword) }}
+                    </div>
+                    <div class="row">
+                        {{ form_row(registrationForm.agreeTerms) }}
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn">Sign Up</button>
+                    </div>
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<div class="container-fluid text-center footer">
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="ion-ios-heart" aria-hidden="true"></i> by <a href="https://bj-technodev.fr" target="_blank"> BjTechnoDev</a>
+</div>
+
+
+
+
+
+
+
+
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+</body>
+</html>
