@@ -32,6 +32,11 @@ class Tableau
      */
     private $date;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $datte;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Tableau
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getDatte(): ?\DateTimeInterface
+    {
+        return $this->datte;
+    }
+
+    public function setDatte(\DateTimeInterface $datte): self
+    {
+        $this->datte = $datte;
 
         return $this;
     }
