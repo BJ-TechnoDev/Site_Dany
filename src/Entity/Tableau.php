@@ -27,6 +27,16 @@ class Tableau
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $datte;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +62,30 @@ class Tableau
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getDatte(): ?\DateTimeInterface
+    {
+        return $this->datte;
+    }
+
+    public function setDatte(\DateTimeInterface $datte): self
+    {
+        $this->datte = $datte;
 
         return $this;
     }

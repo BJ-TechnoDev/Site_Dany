@@ -23,10 +23,14 @@ class Decoration
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $date;
 
     public function getId(): ?int
     {
@@ -53,6 +57,18 @@ class Decoration
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(string $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }
