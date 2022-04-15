@@ -21,7 +21,7 @@
                 <button id="navbar" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#" style="color: #ff5a5f">Mes Cancers</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{{path('cancers')}}" style="color: #ff5a5f">Mes Cancers</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{path('tableaux')}}" style="color: #ff5a5f">Mes Tableaux</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{path('decoration')}}" style="color: #ff5a5f">Mes Décorations</a></li>
                         {% if app.user %}
@@ -72,16 +72,20 @@
                                             <h3 class="footer-heading">Plan du site</h3>
                                             <ul class="list-unstyled">
                                                 <li><a href="{{ path('homepage') }}" class="py-1 d-block">Accueil</a></li>
-                                                <li><a href="#" class="py-1 d-block">Mes cancers</a></li>
-                                                <li><a href="#" class="py-1 d-block">Mes décorations</a></li>
-                                                <li><a href="#" class="py-1 d-block">Mes tableaux</a></li>
+                                                <li><a href="{{path('cancers')}}" class="py-1 d-block">Mes cancers</a></li>
+                                                <li><a href="{{path('decoration')}}" class="py-1 d-block">Mes décorations</a></li>
+                                                <li><a href="{{path('tableaux')}}" class="py-1 d-block">Mes tableaux</a></li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6 mb-md-0 mb-4">
                                             <h3 class="footer-heading">Connexion</h3>
                                             <ul class="list-unstyled">
-                                                <li><a href="#" class="py-1 d-block">Se connecter</a></li>
-                                                <li><a href="#" class="py-1 d-block">S'inscrire</a></li>
+                                                {%if app.user%}
+                                                    <li><a href="{{path('app_logout')}}" class="py-1 d-block">Se déconnecter</a></li>
+                                                {%else%}
+                                                    <li><a href="{{path('app_login')}}" class="py-1 d-block">Se connecter</a></li>
+                                                    <li><a href="{{path('app_register')}}" class="py-1 d-block">S'inscrire</a></li>
+                                                {%endif%}
                                             </ul>
                                         </div>
                                     </div>

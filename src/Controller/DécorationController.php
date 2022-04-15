@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Repository\DecorationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,8 +16,10 @@ class DécorationController extends AbstractController
     /**
      * @Route("/decoration", name="decoration")
      */
-    public function index(Request $request, MailerInterface $mailer): Response
+    public function index(Request $request, MailerInterface $mailer, DecorationRepository $repo): Response
     {
+
+        $deco = $repo->findAll();
 
         $form = $this->createForm(ContactType::class);
 
@@ -41,7 +44,8 @@ class DécorationController extends AbstractController
         }
 
         return $this->render('front/decoration.html.twig', [
-            'our_form' => $form->createView()
+            'our_form' => $form->createView(),
+            'decorations' => $deco
         ]);
     }
 
