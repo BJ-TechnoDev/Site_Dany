@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\DecorationRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Entity\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=DecorationRepository::class)
+ * @Vich\Uploadable
  */
 class Decoration
 {
@@ -26,6 +29,12 @@ class Decoration
      * @ORM\Column(type="text")
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="decorations", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
 
     public function getId(): ?int
     {
@@ -55,4 +64,26 @@ class Decoration
 
         return $this;
     }
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     * @return $this
+     */
+    public function setImageFile(File $imageFile = null): self
+    {
+        $this->imageFile = $imageFile;
+
+
+
+        return $this;
+    }
+
 }

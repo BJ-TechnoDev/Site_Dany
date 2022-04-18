@@ -4,6 +4,10 @@ namespace App\Controller\Admin;
 
 use App\Entity\Decoration;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class DecorationCrudController extends AbstractCrudController
 {
@@ -12,14 +16,16 @@ class DecorationCrudController extends AbstractCrudController
         return Decoration::class;
     }
 
-    /*
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            IntegerField::new('id')->onlyOnIndex(),
+            TextField::new('titre'),
+            ImageField::new('imageFile')
+                        ->setFormType(VichImageType::class)
+                        ->setLabel('Image')
         ];
     }
-    */
+
 }
