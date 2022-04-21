@@ -6,7 +6,7 @@ use App\Repository\DecorationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=DecorationRepository::class)
+ * @ORM\Entity(repositoryClass="App\Repository\DecorationRepository", repositoryClass=DecorationRepository::class)
  */
 class Decoration
 {
@@ -23,7 +23,7 @@ class Decoration
     private $titre;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $image;
 
@@ -49,11 +49,13 @@ class Decoration
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
         return $this;
     }
+
+
 
 }
