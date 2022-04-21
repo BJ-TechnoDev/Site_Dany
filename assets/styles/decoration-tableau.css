@@ -216,3 +216,15 @@ body {
 .demo-gallery.dark > ul > li a {
     border: 3px solid #04070a;
 }
+
+/* image after lock*/
+
+.lg-sub-html h4{
+    font-size: 50px;
+}
+
+.lg-outer.lg-grab img.lg-object{
+    max-height: 400px;
+}
+
+

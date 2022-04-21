@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Repository\TableauRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,8 +16,10 @@ class TableauxController extends AbstractController
     /**
      * @Route("/tableaux", name="tableaux")
      */
-    public function index(Request $request, MailerInterface $mailer): Response
+    public function index(Request $request, MailerInterface $mailer, TableauRepository $repository): Response
     {
+
+        $tab = $repository->findAll();
 
         $form = $this->createForm(ContactType::class);
 
@@ -41,7 +44,8 @@ class TableauxController extends AbstractController
         }
 
         return $this->render('front/tableaux.html.twig', [
-            'our_form' => $form->createView()
+            'our_form' => $form->createView(),
+            'tableaux' => $tab
         ]);
     }
 

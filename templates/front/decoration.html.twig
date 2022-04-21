@@ -15,8 +15,8 @@
                     {% for decoration in decorations %}
 
 
-                    <li title="{{ decoration.titre }}" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-375.jpg 375, https://sachinchoolur.github.io/lightgallery.js/static/img/1-480.jpg 480, https://sachinchoolur.github.io/lightgallery.js/static/img/1.jpg 800" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg"
-                        data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                    <li title="{{ decoration.titre }}" data-responsive="build/{{decoration.image}} 375, build/{{decoration.image}} 480, build/{{decoration.image}} 800" data-src="build/{{decoration.image}}"
+                        data-sub-html="<h4>{{decoration.titre}}</h4>">
                         <a href="">
                             <img class="img-responsive" src="build/{{decoration.image}}">
                             <div class="demo-gallery-poster">
