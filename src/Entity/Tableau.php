@@ -26,15 +26,9 @@ class Tableau
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $image;
-
-    /**
-     * @Vich\UploadableField(mapping="tableaux", fileNameProperty="image")
-     * @var File
-     */
-    private $imageFile;
 
     public function getId(): ?int
     {
@@ -58,30 +52,9 @@ class Tableau
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
-
-        return $this;
-    }
-
-    /**
-     * @return File|null
-     */
-    public function getImageFile(): ?File
-    {
-        return $this->imageFile;
-    }
-
-    /**
-     * @param File|null $imageFile
-     * @return $this
-     */
-    public function setImageFile(File $imageFile = null): self
-    {
-        $this->imageFile = $imageFile;
-
-
 
         return $this;
     }
