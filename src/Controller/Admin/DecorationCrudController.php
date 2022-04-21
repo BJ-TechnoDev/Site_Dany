@@ -20,11 +20,10 @@ class DecorationCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IntegerField::new('id')->onlyOnIndex(),
             TextField::new('titre'),
-            ImageField::new('imageFile')
-                        ->setFormType(VichImageType::class)
-                        ->setLabel('Image')
+            ImageField::new('image', 'Image')
+                ->setUploadDir('assets/images')
+                ->setBasePath('/build')
         ];
     }
 
