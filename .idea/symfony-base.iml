@@ -148,5 +148,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="cookiealert" level="application" />
+    <orderEntry type="library" name="material-photo-gallery" level="application" />
+    <orderEntry type="library" name="jquery-mousewheel" level="application" />
   </component>
 </module>
