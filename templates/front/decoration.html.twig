@@ -1,23 +1,45 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DecorationController!{% endblock %}
-
 {% block stylesheets %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.2/css/lightgallery.min.css" integrity="sha512-J3GvWzuXtDGv7Kmqhj1gbn/jM2i3G40XtSBcqGEQ7eLpP0izHygFgT0FMIVCWMVRZnz7u2rS6mhTtlQ3oJsr1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{ encore_entry_link_tags('page') }}
 {% endblock %}
 
 {% block body %}
 
-    {% for decoration in decorations %}
 
-    <h2>{{decoration.titre}}</h2>
-        <img src="{{decoration.image}}" alt="">
+        <div class="cont">
+            <div class="page-head">
+            <div class="demo-gallery">
+                <ul id="lightgallery">
+                    {% for decoration in decorations %}
 
-    {% endfor %}
+
+                    <li title="{{ decoration.titre }}" data-responsive="https://sachinchoolur.github.io/lightgallery.js/static/img/1-375.jpg 375, https://sachinchoolur.github.io/lightgallery.js/static/img/1-480.jpg 480, https://sachinchoolur.github.io/lightgallery.js/static/img/1.jpg 800" data-src="https://sachinchoolur.github.io/lightgallery.js/static/img/1-1600.jpg"
+                        data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                        <a href="">
+                            <img class="img-responsive" src="build/{{decoration.image}}">
+                            <div class="demo-gallery-poster">
+                                <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+                            </div>
+                        </a>
+                    </li>
+
+                        {% endfor %}
+                </ul>
+            </div>
+        </div>
+
 
 {% endblock %}
 
 {% block javascripts %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/lightgallery.min.js" integrity="sha512-76iVPLEHY5kfZFCmHBQHLkcE4I2r+gK/I/HLYcm3iCuRO/hopAtyO3AFPCZy5B4347wQ7NftStUBVk/cR21MSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/pager/lg-pager.min.js" integrity="sha512-KoBwd0uHxIA3pdb+tXMByTACHPWBbf109VniSdkvHysDA76OIgg7pCs/ba+hB2ayX1FcJUrp34T2Cl1tfZRg5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/share/lg-share.min.js" integrity="sha512-Xrr3ws2xubQKmAGFjN35DbAz1ysFHMbO/ntU93CoWV/Xn8343T5AM0dpJhWPu0Z9QVXGCTIyf9U5XWM29g1lvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/fullscreen/lg-fullscreen.min.js" integrity="sha512-AIy1UL5DoL9cg45KaCPYO9321w1B3cVF8I5oV21DzdOFgHeh+ZqO/VMnD0hMMVNpRju8BYWsb1Eh5wJ/wqbGLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/zoom/lg-zoom.min.js" integrity="sha512-CFy+xT+nDI3oEsnu6zLgBYr1ECW3cfnaFw6k3zkc1qpOG71BvulPWMrPNksGgIQq8WaMZIotttJkmSmNJdC4eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.4.0/plugins/hash/lg-hash.min.js" integrity="sha512-GSVVWTB+Qj8JMdQhmUIVSUGzODqoR65MHd/oeF40DlWCuWKXNXeJU70c2dDprNoT4PFsDc9BSCRL9UgFMXCwKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js" integrity="sha512-Nh/FthCqOFq56kGp1DsNb6GKK29iIv2ZJc7Fylln1WRrWpeE5LjSBWeAp61dkBASDxZT12aL9mZyIrhsAqgRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {{ encore_entry_script_tags('page') }}
 {% endblock %}
