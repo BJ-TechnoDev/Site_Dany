@@ -62,7 +62,8 @@ a {
 }
 
 .container_img {
-    width: 100%;
+    width: 85%;
+    height: 450px;
     animation: slideIn 1.5s ease-in-out forwards;
 }
 
