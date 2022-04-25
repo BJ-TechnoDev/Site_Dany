@@ -33,6 +33,11 @@ a {
     transition: .3s ease-in-out;
 }
 
+.img-inner {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -62,8 +67,8 @@ a {
 }
 
 .container_img {
-    width: 85%;
-    height: 450px;
+    width: 60%;
+    height: 550px;
     animation: slideIn 1.5s ease-in-out forwards;
 }
 
