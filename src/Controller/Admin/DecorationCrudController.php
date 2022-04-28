@@ -37,7 +37,6 @@ class DecorationCrudController extends AbstractCrudController
                 ->setBasePath('uploads/images');
         }
 
-
     }
 
     /**

@@ -36,7 +36,6 @@ class TableauCrudController extends AbstractCrudController
                 ->setBasePath('uploads/images');
         }
 
-
     }
 
     /**
