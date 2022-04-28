@@ -1,5 +1,5 @@
 {% extends 'base.html.twig' %}
-{% block title %} {% endblock %}
+{% block title %}Dany - Bienvenue sur la page cancers de mon site web{% endblock %}
 {% block metadescription %}Bonjour je suis Dany Bruyère je vous présente mon site qui consistera a vous presenter mes deux cancers et mes conseils et aide pour vous aide, Je vous présenterai également mes tableaux et mes décoration au fil du temps{% endblock %}
 
 
@@ -19,10 +19,10 @@
                     {% for tableau in tableaux %}
 
 
-                    <li title="{{ tableau.titre }}" data-responsive="build/{{tableau.image}} 375, build/{{tableau.image}} 480, build/{{tableau.image}} 800" data-src="build/{{tableau.image}}"
+                    <li title="{{ tableau.titre }}" data-responsive="{{asset('uploads/images/'~tableau.image)}} 375, {{asset('uploads/images/'~tableau.image)}} 480, {{asset('uploads/images/'~tableau.image)}} 800" data-src="{{asset('uploads/images/'~tableau.image)}}"
                         data-sub-html="<h4>{{tableau.titre}}</h4>">
                         <a class="imageHeight" href="">
-                            <img class="img-responsive" src="build/{{tableau.image}}" alt="">
+                            <img class="img-responsive" src="{{asset('uploads/images/'~tableau.image)}}" alt="">
                             <div class="demo-gallery-poster">
                                 <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png" alt="">
                             </div>

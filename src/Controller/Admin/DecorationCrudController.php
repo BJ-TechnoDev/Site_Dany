@@ -24,15 +24,17 @@ class DecorationCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
 
-        yield TextField::new('titre');
+        yield TextField::new('titre')->setColumns("col-lg-6 col-12");
         if ($pageName === Crud::PAGE_NEW){
-        yield ImageField::new('image', 'Image')
-                    ->setUploadDir('assets/images')
-                    ->setBasePath('/build')->setRequired(true);
+        yield ImageField::new('image', 'Image')->setColumns("col-lg-6 col-12")
+                    ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
+                    ->setUploadDir('public/uploads/images')
+                    ->setBasePath('uploads/images')->setRequired(true);
         }else{
             yield ImageField::new('image', 'Image')
-                ->setUploadDir('assets/images')
-                ->setBasePath('/build');
+                ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
+                ->setUploadDir('public/uploads/images')
+                ->setBasePath('uploads/images');
         }
 
 
