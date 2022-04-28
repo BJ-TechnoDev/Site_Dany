@@ -19,11 +19,11 @@
                     {% for tableau in tableaux %}
 
 
-                    <li title="{{ tableau.titre }}" data-responsive="{{asset('uploads/images/'~tableau.image)}} 375, {{asset('uploads/images/'~tableau.image)}} 480, {{asset('uploads/images/'~tableau.image)}} 800" data-src="{{asset('uploads/images/'~tableau.image)}}"
+                    <li title="{{ tableau.titre }}" data-responsive="{{asset('uploads/images/tableau/'~tableau.image)}} 375, {{asset('uploads/images/tableau/'~tableau.image)}} 480, {{asset('uploads/images/tableau'~tableau.image)}} 800" data-src="{{asset('uploads/images/tableau/'~tableau.image)}}"
                         data-sub-html="<h4>{{tableau.titre}}</h4>">
 
                         <a class="imageHeight" href="">
-                            <img class="img-responsive" src="{{asset('uploads/images/'~tableau.image)}}" alt="">
+                            <img class="img-responsive" src="{{asset('uploads/images/tableau/'~tableau.image)}}" alt="">
                             <div class="demo-gallery-poster">
                                 <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png" alt="">
                             </div>

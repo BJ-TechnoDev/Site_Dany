@@ -27,13 +27,13 @@ class TableauCrudController extends AbstractCrudController
         if ($pageName === Crud::PAGE_NEW){
             yield ImageField::new('image', 'Image')
                 ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
-                ->setUploadDir('public/uploads/images')
-                ->setBasePath('uploads/images')->setRequired(true);
+                ->setUploadDir('public/uploads/images/tableau')
+                ->setBasePath('uploads/images/tableau')->setRequired(true);
         }else{
             yield ImageField::new('image', 'Image')
                 ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
-                ->setUploadDir('public/uploads/images')
-                ->setBasePath('uploads/images');
+                ->setUploadDir('public/uploads/images/tableau')
+                ->setBasePath('uploads/images/tableau');
         }
 
     }

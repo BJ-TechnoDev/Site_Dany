@@ -17,10 +17,10 @@
                     {% for decoration in decorations %}
 
 
-                    <li title="{{ decoration.titre }}" data-responsive="build/{{decoration.image}} 375, build/{{decoration.image}} 480, build/{{decoration.image}} 800" data-src="build/{{decoration.image}}"
+                    <li title="{{ decoration.titre }}" data-responsive="{{asset('uploads/images/decoration/'~decoration.image)}} 375, {{asset('uploads/images/decoration/'~decoration.image)}} 480, {{asset('uploads/images/decoration/'~decoration.image)}} 800" data-src="{{asset('uploads/images/decoration/'~decoration.image)}}"
                         data-sub-html="<h4>{{decoration.titre}}</h4>">
                         <a class="imageHeight" href="">
-                            <img class="img-responsive" src="build/{{decoration.image}}" alt="">
+                            <img class="img-responsive" src="{{asset('uploads/images/decoration/'~decoration.image)}}" alt="">
                             <div class="demo-gallery-poster">
                                 <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png" alt="">
                             </div>

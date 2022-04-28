@@ -28,13 +28,13 @@ class DecorationCrudController extends AbstractCrudController
         if ($pageName === Crud::PAGE_NEW){
         yield ImageField::new('image', 'Image')->setColumns("col-lg-6 col-12")
                     ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
-                    ->setUploadDir('public/uploads/images')
-                    ->setBasePath('uploads/images')->setRequired(true);
+                    ->setUploadDir('public/uploads/images/decoration')
+                    ->setBasePath('uploads/images/decoration')->setRequired(true);
         }else{
             yield ImageField::new('image', 'Image')
                 ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
-                ->setUploadDir('public/uploads/images')
-                ->setBasePath('uploads/images');
+                ->setUploadDir('public/uploads/images/decoration')
+                ->setBasePath('uploads/images/decoration');
         }
 
     }
