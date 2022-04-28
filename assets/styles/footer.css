@@ -60,15 +60,12 @@ footer {
 .footer-08 .aside-stretch-right:after {
     background: #ff5a5f; }
 @media (max-width: 768px) {
-    .footer-08 .aside-stretch-right {
-        background: transparent; }
     .footer-08 .aside-stretch-right:after {
-        background: transparent;
-        display: none; } }
+        display: none;
+    } }
 
 .container-fluid {
     width: 100%;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto; }
 

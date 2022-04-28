@@ -11,7 +11,7 @@ use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DécorationController extends AbstractController
+class DecorationController extends AbstractController
 {
     /**
      * @Route("/decoration", name="decoration")
