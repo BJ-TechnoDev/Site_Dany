@@ -23,7 +23,7 @@ class Decoration
     private $titre;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="string", nullable=true)
      */
     private $image;
 
