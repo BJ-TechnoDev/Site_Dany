@@ -26,7 +26,7 @@ class Tableau
     private $titre;
 
     /**
-     * @ORM\Column(type="string", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
 
