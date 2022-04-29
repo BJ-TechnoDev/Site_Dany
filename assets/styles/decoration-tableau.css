@@ -116,8 +116,7 @@ body {
     transition: transform 0.15s ease 0s;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    height: 100%;
-    width: 100%;
+    width: 233px;
 }
 
 .demo-gallery > ul > li a:hover > img {
@@ -232,5 +231,5 @@ body {
 /* Max-Height des images */
 
 .imageHeight {
-    max-height: 100px;
+    max-height: 233px;
 }
