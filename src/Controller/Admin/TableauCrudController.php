@@ -23,7 +23,9 @@ class TableauCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
 
-        yield TextField::new('titre');
+        yield TextField::new('titre')
+                ->setColumns("col-lg-6 col-12")
+                ->setLabel('Titre (Maximum 20 caractères)');
         if ($pageName === Crud::PAGE_NEW){
             yield ImageField::new('image', 'Image')
                 ->setUploadedFileNamePattern('[slug]-[contenthash].[extension]')
