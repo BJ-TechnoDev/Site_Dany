@@ -18,25 +18,23 @@ class ContactType extends AbstractType
             ->add('fullName',TextType::class, [
                 'label' => 'Name',
                 'attr' => array(
-                    'placeholder' => 'Your Name here'
+                    'placeholder' => 'Votre nom'
                 )
             ])
             ->add('email',EmailType::class, [
                 'label' => 'Email',
                 'attr' => array(
-                    'placeholder' => 'test@gmail.com'
+                    'placeholder' => 'email@gmail.com'
                 )
             ])
-            ->add('subject', ChoiceType::class, [
-              'choices'  => [
-                'Me contacter a propos de ..' => '',
-                'Mes cancers' => '',
-                'Une demande de tableaux ou décos' => '',
-                'Autre' => ''
-              ]
+            ->add('subject', TextType::class,[
+                'label' => 'Name',
+                'attr' => array(
+                    'placeholder' => 'Votre sujet'
+                )
             ])
             ->add('message', TextareaType::class, [
-                'attr' => ['rows' => 3, 'placeholder' => 'Your mess here'],
+                'attr' => ['rows' => 3, 'placeholder' => 'Votre message'],
             ])
         ;
     }
