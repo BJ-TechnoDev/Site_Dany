@@ -45,6 +45,7 @@ class CancerController extends AbstractController
             return $this->redirectToRoute('homepage');
         }
 
+
         return $this->render('front/cancer.html.twig', [
             'our_form' => $form->createView()
         ]);
