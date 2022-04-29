@@ -116,7 +116,7 @@ body {
     transition: transform 0.15s ease 0s;
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
-    width: 233px;
+    width: 100%;
 }
 
 .demo-gallery > ul > li a:hover > img {
