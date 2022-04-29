@@ -226,7 +226,11 @@ body {
     max-height: 400px;
 }
 
-/* */
+/* titre bdd */
+.heading-bdd{
+    font-size: 1rem;
+    color: #ffffff !important;
+}
 
 /* Max-Height des images */
 
