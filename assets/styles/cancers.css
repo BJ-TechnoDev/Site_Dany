@@ -32,7 +32,7 @@ h2.footer-heading{
 }
 
 .heightcancer {
-    height: 620px;
+    height: 690px;
 }
 
 @media (max-width: 1400px){
@@ -40,7 +40,7 @@ h2.footer-heading{
         font-size: 17px !important;
     }
     .heightcancer {
-        height: 650px !important;
+        height: 680px !important;
     }
 }
 @media (max-width: 1199px){
@@ -48,7 +48,7 @@ h2.footer-heading{
         font-size: 16px !important;
     }
     .heightcancer {
-        height: 680px !important;
+        height: 695px !important;
     }
 }
 @media (max-width: 991px){
