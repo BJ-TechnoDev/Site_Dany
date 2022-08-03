@@ -237,3 +237,39 @@ body {
 .imageHeight {
     max-height: 233px;
 }
+
+/* loader */
+
+.loader {
+    position: absolute;
+    left: calc(50% + 70px);
+    transform: translateX(-50%);
+    top: 20%;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.textloader {
+    position: absolute;
+    left: calc(50% + 50px);
+    transform: translateX(-50%);
+    top: calc(20% + 20px);
+    color: #fff;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

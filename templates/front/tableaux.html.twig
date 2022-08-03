@@ -12,7 +12,7 @@
 {% block body %}
 
 
-        <div class="cont">
+        <div class="cont" id="myDiv">
             <div class="page-head">
             <div class="demo-gallery">
                 <ul id="lightgallery">
@@ -30,11 +30,16 @@
                         </a>
                         <h2 class="heading-bdd">{{tableau.titre}}</h2>
                     </li>
-
-                        {% endfor %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
+    </div>
+
+    <div id="loader">
+        <div class="loader">
+        </div>
+        <p class="textloader">La map est en cours chargement...</p>
     </div>
 
 
